@@ -15,21 +15,23 @@ main {
   margin: 50px;
   text-align: justify;
 }
-ul {
+form {
   border: 1px;
   border-style: solid;
   border-color: rgb(232, 147, 117);
   margin: 20px;
   padding-inline-start: 0;
 }
-li {
+input,
+button [type="submit"] {
+  min-height: 36px;
+  min-width: 36px;
+}
+
+ul {
+  list-style: none;
   margin: 20px;
-  padding: 10px;
-  border: 1px;
-  border-style: solid;
-  border-color: #185e5b;
-  color: #185e5b;
-  list-style-type: none;
+  padding-left: 0;
 }
 footer {
   background-color: rgb(232, 147, 117);
@@ -42,4 +44,7 @@ footer h3 {
 footer a {
   color: rgb(246, 239, 230);
   text-decoration: none;
+}
+.strike {
+  text-decoration: line-through;
 }

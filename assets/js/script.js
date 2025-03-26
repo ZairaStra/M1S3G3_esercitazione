@@ -1,5 +1,25 @@
 const form = document.querySelector("form");
-console.dir(form);
+const ul = document.getElementById("list");
+
+form.onsubmit = function (e) {
+  e.preventDefault();
+  console.log("submit");
+
+  const inputNode = document.getElementById("taskInput");
+  console.log(inputNode.value);
+
+  const li = document.createElement("li");
+  li.innerText = inputNode.value;
+
+  li.onclick = function (e) {
+    e.currentTarget.classList.toggle("strike");
+  };
+
+  ul.appendChild(li);
+};
+
+//AVEVI SBAGLIATO IL MODO DI PENSARE
+/* console.dir(form);
 console.log(form);
 form.onsubmit = function (e) {
   e.preventDefault();
@@ -26,6 +46,7 @@ form.onsubmit = function (e) {
   form.reset();
 };
  */
+/* 
   const li = document.querySelectorAll("li");
   elementList = function (e) {
     e.currentTarget.elementList.toggle("text-decoration: line-trough");
@@ -33,3 +54,4 @@ form.onsubmit = function (e) {
   };
   li.onclick = elementList;
 };
+*/
